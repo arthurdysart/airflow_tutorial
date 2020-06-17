@@ -12,7 +12,7 @@ from lib.itemize_s3_bucket import Itemize
 # DAG DEFINITION
 dag_context = {"dag_id": "transport_json_object_using_s3",
 
-               "schedule_interval": "* 16 * * ",
+               "schedule_interval": "* 16 * * *",
 
                "default_args": {
                    "owner": "Airflow admin",
