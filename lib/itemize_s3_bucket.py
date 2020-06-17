@@ -4,7 +4,7 @@ class Itemize(object):
         self.local_path = local_path or "$AIRFLOW_HOME/json_manifest.txt"
         self.remote_path = remote_path or "s3://my_airflow_json_bucket/json/"
         self.command_template = """
-            aws s3 ls --recursive {remote_path} | awk '{print $4}' > {local_path}
+            aws s3 ls --recursive {remote_path} | awk '{{print $4}}' > {local_path}
             ;
         """
 

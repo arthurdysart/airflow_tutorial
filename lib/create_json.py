@@ -29,7 +29,7 @@ class Create(object):
                                             filename=datetime.now().isoformat())
 
     @staticmethod
-    def create_json_object() -> Dict[Any]:
+    def create_json_object() -> Dict[str, Any]:
         """ Generate new JSON object properties. """
         return {
             "datetime_now": datetime.now().isoformat(),
